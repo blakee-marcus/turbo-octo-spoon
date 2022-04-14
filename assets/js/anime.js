@@ -57,11 +57,13 @@ var displayInfo = function(data) {
     // Change background color based on API's chosen color
     $("#anime").css("background-color", anime.cover_color);
 
+    //if there is a trailer display a watch trailer button otherwise hide trailer container
     if (anime.trailer_url === null || anime.trailer_url === undefined) {
         $("#trailer-container").addClass("hide");
     } else {
         $("#trailer").attr("href", anime.trailer_url);
     }
 };
+
 
 getRandomAnime();
