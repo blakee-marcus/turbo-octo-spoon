@@ -15,12 +15,16 @@
     </header>
     <main>
         <!-- anime stuff -->
-        <div class="anime-container">
-            <div class="anime-image"></div>
+        <div class="anime-container" id="anime">
+            <div class="anime-image">
+                <img id="anime-cover" src="" alt="">
+            </div>
             <div class="anime-information">
-                <h3>Title</h3>
+                <h3 id="title"></h3>
                 <p>Genre:
-                    <span id="genre"></span>
+                    <span id="genre1"></span>
+                    <span id="genre2"></span>
+                    <span id="genre3"></span>
                 </p>
                 <div class="grid grid-cols-3">
                     <p>Start Date: 
@@ -36,9 +40,10 @@
                 <p>Description: 
                     <span id="anime-description"></span>
                 </p>
-                <p>Trailer: 
-                    <span id="trailer-url"></span>
-                </p>
+                <div id="trailer-container">
+                    <a id="trailer" href="">Watch Trailer</a>
+                </div>
+                
             </div>
         </div>
 
@@ -47,6 +52,7 @@
 
         </div>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/anime.js"></script>
 </body>
 </html>
