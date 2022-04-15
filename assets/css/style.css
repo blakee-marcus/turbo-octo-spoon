@@ -1,0 +1,13 @@
+.hide {
+    display: none;
+}
+
+.intro { 
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+padding: 300px 200px 200px 200px;
+}
+.intro-button {
+    border-radius: 50%;
+}

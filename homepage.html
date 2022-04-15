@@ -11,18 +11,73 @@
 <body>
     <!-- Navigation and jumbotron -->
     <header>
-
+        <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
+        <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
     </header>
     <main>
         <!-- anime stuff -->
-        <div>
-
+        <div class="grid grid-cols-5 anime-container" id="anime">
+            <div class="cols-span-2 anime-image">
+                <img id="anime-cover" src="" alt="">
+            </div>
+            <div class="cols-span-3 anime-information">
+                <h3 id="title"></h3>
+                <p>Genre:
+                    <span id="genre1"></span>
+                    <span id="genre2"></span>
+                    <span id="genre3"></span>
+                </p>
+                <div class="grid grid-cols-3">
+                    <p class="font-bold">Start Date: 
+                        <span id="start-date"></span>
+                    </p>
+                    <p class="font-bold">Episode Count: 
+                        <span id="episode-count"></span>
+                    </p>
+                    <p class="font-bold">Score: 
+                        <span id="score"></span>
+                </div>
+                </p>
+                <p class="font-bold">Description: 
+                    <span id="anime-description"></span>
+                </p>
+                <div id="trailer-container">
+                    <a id="trailer" href="">Watch Trailer</a>
+                </div>
+                
+            </div>
         </div>
 
         <!-- meal stuff -->
-        <div>
+        <div class="meal-container">
+            
+            <div class="meal-image"></div>
+            <div class="meal-information">
+                <h4></h4>
+                <p>Genre:
+                    <span id="typesoffood"></span>
+                </p>
+                <p> Dish Name:
+                    <span id="Dishname"></span>
+                </p>
+                <p>Ingredients:
+                    <span id="Ingredients"></span>
+                </p>
+                <p>Supplies:
+                    <span id="supplies"></span>
+        
+                </p>
+                <p>Directions:
+                    <span id="Directions"></span>
+
+                </p>
+
+
+            </div>
 
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/anime.js"></script>
 </body>
 </html>

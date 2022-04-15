@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
        <!-- Web page CSS -->
-       <link rel="stylesheet" href="./style.css" />
+       <link rel="stylesheet" href="./assets/css/style.css" />
       
     <head>
         <title> AniBite </title>
@@ -13,18 +13,23 @@
    
     
         <!-- add url of gif (background) to welcome page -->
-    <body class="Anibite">
+    <body onload="start" class="welcomeimage" style="background-image: url('https://static.wikia.nocookie.net/animal-jam-clans-1/images/7/72/Pondfromimgur.gif/revision/latest?cb=20190422173755');">
+        
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
         <main class="intro">
-                <h1 class="intro"> Welcome To Anibite
-                </h1>
+                <h1  style="font: size 300%;"> AniBite </h1>
+                <p style="text-align:center;"></p>
                 <form class="welcome page">
-                    
-        
-                    <button type="submit" class="EnterButton">Enter</button>
-        
+                    <a href="./homepage.html"><input type="button" value="Enter"></input></a>
                 </form>
             </main>
             <!-- PUT OUR JQUERY/AJAX API PATH HERE -->
-            <script src=""></script> 
+            <script src="./assets/js/script.js"></script> 
     </body>
 </html>
