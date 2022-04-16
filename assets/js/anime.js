@@ -42,14 +42,25 @@ var displayInfo = function(data) {
     //display start date
     $("#start-date").text(startDate);
     
-    //Display Episode Count
-    $("#episode-count").text(anime.episodes_count);
+    //Display Run Length if it is a movie otherwise display episode count
+    if (anime.episodes_count === 1) {
+        $("#length-type").text("Run Length:");
+        $("#episode-count").text(anime.episode_duration + " minutes");
+    } else {
+        $("#episode-count").text(anime.episodes_count);
+    }
+    
 
     //Display Score
     $("#score").text(anime.score);
 
-    //Display English Description
-    $("#anime-description").html(anime.descriptions.en).text();
+    //Display English Description if it exist
+    if (anime.descriptions.en === null || anime.descriptions.en === undefined) {
+        $("#anime-description").text("No English Description Given")
+    } else {
+        $("#anime-description").html(anime.descriptions.en).text();
+    }
+    
 
     //Display Cover Image of Anime
     $("#anime-cover").attr("src", anime.cover_image);
