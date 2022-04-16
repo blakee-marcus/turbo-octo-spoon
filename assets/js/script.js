@@ -3,5 +3,5 @@ const myElement = document.getElementById("")
      location.replace("./homepage.html");
  }
 
-}
+
  setInterval(redirectHomepage, 5000);
