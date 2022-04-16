@@ -3,12 +3,15 @@
 
 
 var searchMeal = function (){
-  var apiUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood&a=Canadian/images/media/meals/llcbn01574260722.jpg/preview';
+  
+  // random pic shows up after each web refreash
+  var apiUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
     // search meal
     fetch(apiUrl).then(function(response) {
       if (response.ok) {
         return response.json().then(function(data) {
-          displayInfo(data);
+          displayMealInfo(data);
+          console.log(data);
         });
         };
       }); 
@@ -16,14 +19,17 @@ var searchMeal = function (){
 
 
       var displayMealInfo = function(data) {
-        var meal = data.meals[0].strMeal;
+        var meal = data.meals[0].strMealThumb;
+        console.log(meal);
 
         // display the image of the meal
-        $("#mealimg").attr("src", meal.meals);
+        $("#mealimg").attr("src", meal);
       }
 
       
 
-    
-      // displayMealInfo();
+  
+//displayMealInfo();
       searchMeal();
+      
+// var apiUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood&a=Canadian/images/media/meals/llcbn01574260722.jpg/preview';  
