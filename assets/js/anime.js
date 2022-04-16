@@ -49,7 +49,7 @@ var displayInfo = function(data) {
     $("#score").text(anime.score);
 
     //Display English Description
-    $("#anime-description").text(anime.descriptions.en);
+    $("#anime-description").html(anime.descriptions.en).text();
 
     //Display Cover Image of Anime
     $("#anime-cover").attr("src", anime.cover_image);
