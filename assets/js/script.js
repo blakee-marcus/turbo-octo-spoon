@@ -1,5 +1,6 @@
-var redirectHomepage = function() {
-    location.replace("./homepage.html");
-}
+const myElement = document.getElementById("")
+ var redirectHomepage = function() {
+     location.replace("./homepage.html");
+ }
 
 setInterval(redirectHomepage, 9500);
