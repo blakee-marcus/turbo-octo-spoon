@@ -2,4 +2,4 @@ var redirectHomepage = function() {
     location.replace("./homepage.html");
 }
 
-setInterval(redirectHomepage, 5000);
+setInterval(redirectHomepage, 9500);
