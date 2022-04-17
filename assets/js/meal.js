@@ -42,7 +42,7 @@ var searchMeal = function (){
         $("#ingredients").text(mealIngr);
 
         // youTube video link
-        $("#meal-video").attr("href", strYoutube);
+        $("#meal-video").attr("href", mealVideo);
       }
 
   
