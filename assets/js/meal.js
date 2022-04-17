@@ -33,6 +33,7 @@ var searchMeal = function (){
         var meal = data.meals[0].strMealThumb;
         var mealIngr = data.meals[0].strInstructions;
         var mealVideo = data.meals[0].strYoutube;
+        var mealName = data.meals[0].strMeal;
         console.log(mealIngr);
 
         // display the image of the meal
@@ -43,6 +44,9 @@ var searchMeal = function (){
 
         // youTube video link
         $("#meal-video").attr("href", mealVideo);
+
+        // display the meal name
+        $("#dish-name").text(mealName);
       }
 
   
