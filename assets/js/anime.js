@@ -29,9 +29,18 @@ var displayInfo = function(data) {
         $("#genre1").text("No Genre Listed");
     } else {
         // Display top 3 Genre of Anime
-        $("#genre1").text(anime.genres[0] + " ");
-        $("#genre2").text(anime.genres[1] + " ");
-        $("#genre3").text(anime.genres[2]);
+        $("#genre1").text(anime.genres[0]);
+        // if there is more than one genre display it
+        if (anime.genres[1] === undefined) {
+            $("#genre2").text("");
+        } else {
+            $("#genre2").text(", " + anime.genres[1]);
+        }
+        if (anime.genres[2] === undefined) {
+            $("#genre3").text("");
+        } else {
+            $("#genre3").text(", " + anime.genres[2]);
+        }
     }
     
     //Splits Start Date data at date because api includes time in string
@@ -42,14 +51,25 @@ var displayInfo = function(data) {
     //display start date
     $("#start-date").text(startDate);
     
-    //Display Episode Count
-    $("#episode-count").text(anime.episodes_count);
+    //Display Run Length if it is a movie otherwise display episode count
+    if (anime.episodes_count === 1 || anime.episodes_count === 0) {
+        $("#length-type").text("Run Length:");
+        $("#episode-count").text(anime.episode_duration + " minutes");
+    } else {
+        $("#episode-count").text(anime.episodes_count);
+    }
+    
 
     //Display Score
     $("#score").text(anime.score);
 
-    //Display English Description
-    $("#anime-description").html(anime.descriptions.en).text();
+    //Display English Description if it exist
+    if (anime.descriptions.en === null || anime.descriptions.en === undefined) {
+        $("#anime-description").text("No English Description Given")
+    } else {
+        $("#anime-description").html(anime.descriptions.en).text();
+    }
+    
 
     //Display Cover Image of Anime
     $("#anime-cover").attr("src", anime.cover_image);
