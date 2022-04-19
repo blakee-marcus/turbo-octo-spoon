@@ -15,7 +15,6 @@ var searchMeal = function (){
 
 var displayMealInfo = function(data) {
   var mealInfo = data.meals[0];
-  console.log(mealInfo);
   var test = document.querySelector("#test");
 
   // display the image of the meal
@@ -25,8 +24,8 @@ var displayMealInfo = function(data) {
   //display dish name
   $("#meal-name").text(mealInfo.strMeal);
 
-  // display ingredients
-  $("#recipe").text(mealInfo.strInstructions);
+  // display instructions
+  $("#recipe").html(mealInfo.strInstructions).text();
 
   // youTube video link
   $("#meal-video").attr("href", mealInfo.strYoutube);
