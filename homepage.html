@@ -10,19 +10,19 @@
 </head>
 <body>
     <!-- Navigation and jumbotron -->
-    <header>
+    <header class="">
         <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
         <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
-        <button>AniBite Me</button>
+        <button class="">AniBite Me</button>
         <!-- <button> mobile navigation button anime / meal / saved </button> -->
     </header>
-    <main class="grid cols-span">
+    <main class="grid grid-cols-2 gap-2">
         <!-- anime stuff -->
-        <div class="grid grid-cols-5 anime-container" id="anime">
-            <div class="cols-span-2 anime-image">
-                <img id="anime-cover" src="" alt="">
+        <div class="grid grid-cols-2 anime-container" id="anime">
+            <div class="anime-image">
+                <img class="image-thing" id="anime-cover" src="" alt="">
             </div>
-            <div class="cols-span-3 anime-information">
+            <div class="anime-information">
                 <h2 id="title"></h2>
                 <p>Genre:
                     <span id="genre1"></span>
@@ -52,13 +52,13 @@
         </div>
 
         <!-- meal stuff -->
-        <div class="meal-container">
+        <div class="grid grid-cols-2 cols-span-3 meal-container">
             
-            <div id="meal">
-                <img id="mealimg" src="" alt="">
+            <div id="cols-span-2 meal">
+                <img class="image-thing" id="mealimg" src="" alt="">
             </div>
 
-            <div class="meal-information">
+            <div class="cols-span-2 meal-information">
                 <h4 id="dish-name" class="font-bold"></h4>
                 <!-- <p>Genre:
                     <span id="typesoffood"></span>

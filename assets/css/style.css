@@ -16,3 +16,9 @@ padding: 300px 200px 200px 200px;
     background-size: cover;
     background-attachment: fixed;
 }
+
+.image-thing {
+    object-fit: cover;
+    width: 400px;
+    height: 500px;
+}
