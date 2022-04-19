@@ -10,13 +10,13 @@
 </head>
 <body>
     <!-- Navigation and jumbotron -->
-    <header class="">
+    <header>
         <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
         <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
-        <button class="">AniBite Me</button>
+        <button class="rounded-full bg-slate-800 text-white">AniBite Me</button>
         <!-- <button> mobile navigation button anime / meal / saved </button> -->
     </header>
-    <main class="grid grid-cols-2 gap-2">
+    <main class="grid grid-cols-2 gap-5">
         <!-- anime stuff -->
         <div class="grid grid-cols-2 anime-container" id="anime">
             <div class="anime-image">
@@ -66,7 +66,7 @@
                 <p>Dish Name:
                     <span id="dishname"></span>
                 </p> -->
-                <p>Ingredients:
+                <p class="overflow-auto">Ingredients:
                     <span id="ingredients"></span>
                 </p>
                <!-- <p>Supplies:
@@ -74,7 +74,7 @@
         
                 </p> -->
                 <div id="video-container">
-                    <a id="meal-video" href="">Watch: How to Make This</a>
+                    <a id="meal-video" href="" target="_blank" rel="noopener noreferrer">Watch: How to Make This</a>
                 </div>
             </div>
 
@@ -89,3 +89,8 @@
     <script src="./assets/js/meal.js"></script>
 </body>
 </html>
+
+<!-- colors:
+orange-400
+blue-700
+white -->
