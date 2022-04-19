@@ -13,8 +13,10 @@
     <header>
         <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
         <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
+        <button>AniBite Me</button>
+        <!-- <button> mobile navigation button anime / meal / saved </button> -->
     </header>
-    <main>
+    <main class="grid cols-span">
         <!-- anime stuff -->
         <div class="grid grid-cols-5 anime-container" id="anime">
             <div class="cols-span-2 anime-image">
@@ -74,10 +76,12 @@
                 <div id="video-container">
                     <a id="meal-video" href="">Watch: How to Make This</a>
                 </div>
-
-
             </div>
 
+        </div>
+
+        <div class="saved-combination">
+            <!-- insert localStorage stuff script here -->
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
