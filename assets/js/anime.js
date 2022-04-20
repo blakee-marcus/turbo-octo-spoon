@@ -55,7 +55,7 @@ var displayInfo = function(data) {
         $("#length-type").text("");
         $("#episode-count").text(anime.episode_duration + "m");
     } else {
-        $("#episode-count").text(anime.episodes_count + "episodes");
+        $("#episode-count").text(anime.episodes_count + " episodes");
     }
     
 
