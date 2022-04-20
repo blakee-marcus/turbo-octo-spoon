@@ -11,18 +11,94 @@
 <body>
     <!-- Navigation and jumbotron -->
     <header>
-
+        <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
+        <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
+        <button class="rounded-full bg-slate-800 text-white">AniBite Me</button>
+        <!-- <button> mobile navigation button anime / meal / saved </button> -->
     </header>
-    <main>
+    <main class="grid grid-cols-2 gap-5">
         <!-- anime stuff -->
-        <div>
-            testing
+        <div class="grid grid-cols-2 anime-container" id="anime">
+            <div class="anime-image">
+                <img class="image-thing" id="anime-cover" src="" alt="">
+            </div>
+            <div class="anime-information">
+                <h2 id="title"></h2>
+                <p>Genre:
+                    <span id="genre1"></span>
+                    <span id="genre2"></span>
+                    <span id="genre3"></span>
+                </p>
+                <div class="grid grid-cols-3">
+                    <p class="font-bold">Start Date:<br> 
+                        <span id="start-date"></span>
+                    </p>
+                    <p class="font-bold">
+                        <span id="length-type">Episode Count:</span><br> 
+                        <span id="episode-count"></span>
+                    </p>
+                    <p class="font-bold">Score:<br> 
+                        <span id="score"></span>%
+                </div>
+                </p>
+                <p class="font-bold">Overview: <br> 
+                    <span id="anime-description"></span>
+                </p>
+                <div id="trailer-container">
+                    <a id="trailer" href="" target="_blank" rel="noopener noreferrer">Watch Trailer</a>
+                </div>
+                
+            </div>
         </div>
 
         <!-- meal stuff -->
-        <div>
+        <div class="grid grid-cols-2 cols-span-3 meal-container">
+            
+            <div id="cols-span-2 meal">
+                <img class="image-thing" id="meal-image" src="" alt="">
+            </div>
+
+            <div class="cols-span-2 meal-information">
+                <h4 id="meal-name" class="font-bold"></h4>
+                
+                <div  class="overflow-auto">
+                    <!-- Ingredient Container -->
+                    <div class="Ingredient-container">
+                        <h5>Ingredients:</h5>
+                        <ul id="ingredients">
+            
+                        </ul> <br>
+                    </div>
+
+                    <!-- Recipe Container -->
+                    <div class="Recipe-container">
+                        <h5>Recipe:</h5>
+                        <p>
+                            <span id="recipe"></span>
+                        </p>
+                    </div>
+                </div>
+
+                    
+               
+                <div id="video-container">
+                    <a id="meal-video" href="" target="_blank" rel="noopener noreferrer">Watch: How to Make This</a>
+                </div>
+            </div>
 
         </div>
+
+        <div class="saved-combination">
+            <!-- insert localStorage stuff script here -->
+        </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/anime.js"></script>
+    <script src="./assets/js/meal.js"></script>
 </body>
 </html>
+
+<!-- colors:
+orange-400
+blue-700
+white -->
