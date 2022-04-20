@@ -15,7 +15,7 @@ var searchMeal = function (){
 
 var displayMealInfo = function(data) {
   var mealInfo = data.meals[0];
-  var test = document.querySelector("#test");
+  var test = document.querySelector("#ingredients");
 
   // display the image of the meal
   $("#meal-image").attr("src", mealInfo.strMealThumb);

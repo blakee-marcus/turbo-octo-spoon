@@ -55,24 +55,32 @@
         <div class="grid grid-cols-2 cols-span-3 meal-container">
             
             <div id="cols-span-2 meal">
-                <img class="image-thing" id="mealimg" src="" alt="">
+                <img class="image-thing" id="meal-image" src="" alt="">
             </div>
 
             <div class="cols-span-2 meal-information">
-                <h4 id="dish-name" class="font-bold"></h4>
-                <!-- <p>Genre:
-                    <span id="typesoffood"></span>
-                </p>
-                <p>Dish Name:
-                    <span id="dishname"></span>
-                </p> -->
-                <p class="overflow-auto">Ingredients:
-                    <span id="ingredients"></span>
-                </p>
-               <!-- <p>Supplies:
-                    <span id="supplies"></span>
-        
-                </p> -->
+                <h4 id="meal-name" class="font-bold"></h4>
+                
+                <div  class="overflow-auto">
+                    <!-- Ingredient Container -->
+                    <div class="Ingredient-container">
+                        <h5>Ingredients:</h5>
+                        <ul id="ingredients">
+            
+                        </ul> <br>
+                    </div>
+
+                    <!-- Recipe Container -->
+                    <div class="Recipe-container">
+                        <h5>Recipe:</h5>
+                        <p>
+                            <span id="recipe"></span>
+                        </p>
+                    </div>
+                </div>
+
+                    
+               
                 <div id="video-container">
                     <a id="meal-video" href="" target="_blank" rel="noopener noreferrer">Watch: How to Make This</a>
                 </div>
