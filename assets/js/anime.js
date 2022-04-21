@@ -6,7 +6,6 @@ var getRandomAnime = function() {
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
             return response.json().then(function(data) {
-                console.log(data);
                 displayInfo(data);
             });
         };

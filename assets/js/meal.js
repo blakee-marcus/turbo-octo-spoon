@@ -8,47 +8,77 @@ var searchMeal = function (){
       if (response.ok) {
         return response.json().then(function(data) {
           displayMealInfo(data);
-          console.log(data);
+          save(data.meals[0].strMeal, data.meals[0].strInstructions, data.meals[0].strYoutube)
         });
         };
       }); 
     }
 
-    // search meal info
-  var getMealIngredients = function() {
+var displayMealInfo = function(data) {
+  var mealInfo = data.meals[0];
+  var test = document.querySelector("#test");
 
-    var apiUrlIng = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
-    fetch(apiUrlIng).then(function(response) {
-      if (response.ok) {
-        return response.json().then(function(data) {
-          displayMealInfo(data);
-          console.log("apiUrlIng")
-        });
-      };
-    });
+  // display the image of the meal
+  $("#meal-image").attr("src", mealInfo.strMealThumb);
+  $("#meal-image").attr("alt", mealInfo.strMeal);
+
+  //display dish name
+  $("#meal-name").text(mealInfo.strMeal);
+
+  // display instructions
+  $("#recipe").html(mealInfo.strInstructions).text();
+
+  // youTube video link
+  $("#meal-video").attr("href", mealInfo.strYoutube);
+
+  //display Ingredient List
+  for (var i = 1; i < 21; i++) {
+    var ingredientEl = document.createElement("li");
+    var ingredientName = mealInfo['strIngredient' + i];
+    var ingredientMeasure = mealInfo['strMeasure' + i];
+    ingredientEl.textContent = ingredientMeasure + " " + ingredientName;
+    test.appendChild(ingredientEl);
+  }
+}
+// local storage 
+// localStorage.setItem('searchMeal',JSON.stringify(user));
+// var user = JSON.parse(localStorage.getItem('user'));
+// window.localStorage
+
+function save(name, instructions, youtubeLink){
+  var savedHistory = [];
+
+  if(localStorage.getItem("dataMeals")){
+    savedHistory = JSON.parse(localStorage.getItem("dataMeals"))
   }
 
-      // diplaying meal picture
-      var displayMealInfo = function(data) {
-        var meal = data.meals[0].strMealThumb;
-        var mealIngr = data.meals[0].strInstructions;
-        var mealVideo = data.meals[0].strYoutube;
-        var mealName = data.meals[0].strMeal;
-        console.log(mealIngr);
+  var mealObj = {
+    mealName: name,
+    mealInstructions: instructions,
+    mealLink: youtubeLink
+  }
 
-        // display the image of the meal
-        $("#mealimg").attr("src", meal);
+  // console.log(mealObj)
+  savedHistory.push(mealObj);
 
-        // display ingredients
-        $("#ingredients").text(mealIngr);
+  localStorage.setItem("dataMeals", JSON.stringify(savedHistory));
+  // function to save value from local stroage
+}
+// suggetion to create a history.js and have local storage and saved data show there 
+function show(){
+  //this is an array!!!!
+  var dataToShow = JSON.parse(localStorage.getItem("dataMeals"));
+  // alert("saved value is =" + dataToShow);
+  // console.log(data)
 
-        // youTube video link
-        $("#meal-video").attr("href", mealVideo);
+  // var myObj ={"#meal-name":" ","#recipe":" ","meal-video":" "};
+  // var myJson = JSON.stringify(myObj);
 
-        // display the meal name
-        $("#dish-name").text(mealName);
-      }
+  // window.location ="demo_json.php?x=" + myJson;
 
+  // text = localStorage.getItem("testJSON", myJson);
+  // obj = JSON.parse(text);
+  // document.getElementById("demo").innerHTML = obj.name;
   
 //displayMealInfo();
       getMealIngredients();
