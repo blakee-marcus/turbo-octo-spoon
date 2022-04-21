@@ -33,12 +33,12 @@ var displayInfo = function(data) {
         if (anime.genres[1] === undefined) {
             $("#genre2").text("");
         } else {
-            $("#genre2").text(", " + anime.genres[1]);
+            $("#genre2").text(anime.genres[1]);
         }
         if (anime.genres[2] === undefined) {
             $("#genre3").text("");
         } else {
-            $("#genre3").text("& " + anime.genres[2]);
+            $("#genre3").text(" & " + anime.genres[2]);
         }
     }
     
@@ -48,7 +48,7 @@ var displayInfo = function(data) {
     startDate = splitStartDate[0];
 
     //display start date
-    $("#start-date").text(startDate);
+    $("#start-date").text("(" + startDate + ")");
     
     //Display Run Length if it is a movie otherwise display episode count
     if (anime.episodes_count === 1 || anime.episodes_count === 0) {
