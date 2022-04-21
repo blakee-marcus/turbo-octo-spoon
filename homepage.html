@@ -60,40 +60,41 @@
         </div>
 
         <!-- meal stuff -->
-        <div class="grid grid-cols-2 cols-span-3 meal-container">
-            
-            <div id="cols-span-2 meal">
-                <img class="img" id="meal-image" src="" alt="Dish">
+        <div class="meal-container grid grid-cols-2">
+
+           
+
+            <!-- Image -->
+            <div id="image-container">
+                <img id="meal-image" class="image-thing" src="" alt="">
             </div>
 
-            <div class="cols-span-2 meal-information">
-                <h4 id="meal-name" class="font-bold"></h4>
+            <div class="meal-information overflow-auto">
                 
-                <div  class="overflow-auto">
-                    <!-- Ingredient Container -->
-                    <div class="Ingredient-container">
-                        <h5>Ingredients:</h5>
-                        <ul id="ingredients">
-            
-                        </ul> <br>
-                    </div>
-
-                    <!-- Recipe Container -->
-                    <div class="Recipe-container">
-                        <h5>Recipe:</h5>
-                        <p>
-                            <span id="recipe"></span>
-                        </p>
-                    </div>
+                 <!-- Meal Name/Title -->
+                 <div>
+                <h4 id="meal-name" class="font-bold text-center"></h4> <br>
                 </div>
 
+                <!-- Ingredient List -->
+                <h5 class="pl-2 font-semibold">Ingredient List:</h5>
+                <ul id="test" class="pl-2">
                     
-               
-                <div id="video-container">
-                    <a id="meal-video" href="" target="_blank" rel="noopener noreferrer">Watch: How to Make This</a>
-                </div>
-            </div>
+                </ul> <br>
 
+                <!-- Recipe Instructions -->
+                <div class="grid grid-cols-1 pl-2">
+                    <h5 class="font-semibold">Recipe:</h5>
+                
+                    <span id="recipe"></span>
+                </div>
+                
+                
+            </div>
+                <!-- Video Instructions -->
+                <div id="video-container">
+                    <a id="meal-video" href="" target="_blank" rel="noopener noreferrer">Watch Instructions</a>
+                </div>
         </div>
 
         <div class="saved-combination">
