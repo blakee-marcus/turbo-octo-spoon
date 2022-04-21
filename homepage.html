@@ -12,41 +12,49 @@
     <!-- Navigation and jumbotron -->
     <header>
         <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
-        <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
-        <button id="random" class="rounded-full bg-slate-800 text-white">AniBite Me</button>
+        <p class="text-center text-lg basis-1/4">Can't decide on what to do after a long day? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
+        <button class="rounded-full bg-slate-800 text-white">AniBite Me</button>
         <!-- <button> mobile navigation button anime / meal / saved </button> -->
     </header>
     <main class="grid grid-cols-2 gap-5">
         <!-- anime stuff -->
-        <div class="grid grid-cols-2 anime-container" id="anime">
+        <div class="grid grid-cols-2 anime-container " id="anime">
             <div class="anime-image">
-                <img class="image-thing" id="anime-cover" src="" alt="">
+                <img class="img" id="anime-cover" src="" alt="Anime Cover Art">
             </div>
-            <div class="anime-information">
-                <h2 id="title"></h2>
-                <p>Genre:
+            <div class="anime-information  overflow-auto">
+                <h2>
+                     <span id="title"></span>
+                     (<span id="start-date"></span>)
+                </h2>
+                <!-- Genre Line & LengthTime Container-->
+                <div class="facts">
                     <span id="genre1"></span>
                     <span id="genre2"></span>
-                    <span id="genre3"></span>
-                </p>
-                <div class="grid grid-cols-3">
-                    <p class="font-bold">Start Date:<br> 
-                        <span id="start-date"></span>
-                    </p>
-                    <p class="font-bold">
-                        <span id="length-type">Episode Count:</span><br> 
-                        <span id="episode-count"></span>
-                    </p>
-                    <p class="font-bold">Score:<br> 
-                        <span id="score"></span>%
+                    <span id="genre3"></span> &#8226;
+                    <span id="episode-count"></span>
                 </div>
-                </p>
-                <p class="font-bold">Overview: <br> 
+                <!-- Score and Trailer Container -->
+                <ul class="info-line">
+                    <li class="score-circle info-space">
+                        <span id="score" class="circle-text"></span>
+                    </li>
+
+                    <li class="info-space">
+                      <button id="watch-later"><img src="./assets/images/bookmark-icon.png"></button>  
+                    </li>
+
+                    <li class="info-space play-trailer" id="trailer-container">
+                        <a id="trailer" href="" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/images/play-icon.png" class="play-icon">
+                            Watch Trailer
+                        </a>
+                    </li>
+                </ul>
+                <article class="font-bold">Overview: <br> 
                     <span id="anime-description"></span>
-                </p>
-                <div id="trailer-container">
-                    <a id="trailer" href="" target="_blank" rel="noopener noreferrer">Watch Trailer</a>
-                </div>
+                </article>
+                
                 
             </div>
         </div>

@@ -38,13 +38,13 @@ var displayInfo = function(data) {
         if (anime.genres[2] === undefined) {
             $("#genre3").text("");
         } else {
-            $("#genre3").text(", " + anime.genres[2]);
+            $("#genre3").text("& " + anime.genres[2]);
         }
     }
     
     //Splits Start Date data at date because api includes time in string
     var baseStartDate = anime.start_date;
-    var splitStartDate = baseStartDate.split('T');
+    var splitStartDate = baseStartDate.split('-');
     startDate = splitStartDate[0];
 
     //display start date
@@ -52,15 +52,15 @@ var displayInfo = function(data) {
     
     //Display Run Length if it is a movie otherwise display episode count
     if (anime.episodes_count === 1 || anime.episodes_count === 0) {
-        $("#length-type").text("Run Length:");
-        $("#episode-count").text(anime.episode_duration + " minutes");
+        $("#length-type").text("");
+        $("#episode-count").text(anime.episode_duration + "m");
     } else {
-        $("#episode-count").text(anime.episodes_count);
+        $("#episode-count").text(anime.episodes_count + " episodes");
     }
     
 
     //Display Score
-    $("#score").text(anime.score);
+    $("#score").text(anime.score + "%");
 
     //Display English Description if it exist
     if (anime.descriptions.en === null || anime.descriptions.en === undefined) {
