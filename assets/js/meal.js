@@ -1,4 +1,3 @@
-var randomButtonEl = document.getElementById("random");
 var searchMeal = function (){
   
   // random pic shows up after each web refreash
@@ -64,9 +63,22 @@ function save(name, instructions, youtubeLink){
   localStorage.setItem("dataMeals", JSON.stringify(savedHistory));
   // function to save value from local stroage
 }
-  
-//displayMealInfo();
-      getMealIngredients();
-      searchMeal();
+// suggetion to create a history.js and have local storage and saved data show there 
+function show(){
+  //this is an array!!!!
+  var dataToShow = JSON.parse(localStorage.getItem("dataMeals"));
+  // alert("saved value is =" + dataToShow);
+  // console.log(data)
 
-randomButtonEl.addEventListener("click", searchMeal)
+  // var myObj ={"#meal-name":" ","#recipe":" ","meal-video":" "};
+  // var myJson = JSON.stringify(myObj);
+
+  // window.location ="demo_json.php?x=" + myJson;
+
+  // text = localStorage.getItem("testJSON", myJson);
+  // obj = JSON.parse(text);
+  // document.getElementById("demo").innerHTML = obj.name;
+  
+}
+     
+searchMeal();
