@@ -54,8 +54,10 @@ var displayInfo = function(data) {
     if (anime.episodes_count === 1 || anime.episodes_count === 0) {
         $("#length-type").text("");
         $("#episode-count").text(anime.episode_duration + "m");
+    } else if (anime.episodes_count === undefined) {
+        $("#episode-count").text("");
     } else {
-        $("#episode-count").text(anime.episodes_count + " episodes");
+        $("#episode-count").text(anime.episodes_count + " ep");
     }
     
 

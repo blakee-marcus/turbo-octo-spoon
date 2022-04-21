@@ -16,13 +16,13 @@
         <button id="random" class="rounded-full bg-slate-800 text-white">AniBite Me</button>
         <!-- <button> mobile navigation button anime / meal / saved </button> -->
     </header>
-    <main class="grid grid-cols-2 gap-5">
+    <main class="grid grid-cols-2">
         <!-- anime stuff -->
-        <div class="grid grid-cols-2 anime-container " id="anime">
+        <div class="grid grid-flow-col auto-cols-auto anime-container " id="anime">
             <div class="anime-image">
                 <img class="img" id="anime-cover" src="" alt="Anime Cover Art">
             </div>
-            <div class="anime-information  overflow-auto">
+            <div class="anime-information overflow-auto">
                 <h2>
                      <span class="title"id="title"></span>
                      <span class="release-year" id="start-date"></span>
@@ -45,7 +45,7 @@
                     </li>
 
                     <li class="info-space play-trailer" id="trailer-container">
-                        <a class=""id="trailer" href="" target="_blank" rel="noopener noreferrer">
+                        <a class="trailer-btn"id="trailer" href="" target="_blank" rel="noopener noreferrer">
                             <img src="./assets/images/play-icon.png" class="play-icon">
                             Watch Trailer
                         </a>
