@@ -1,4 +1,4 @@
-
+var randomButtonEl = document.getElementById("random");
 var searchMeal = function (){
   
   // random pic shows up after each web refreash
@@ -80,6 +80,8 @@ function show(){
   // obj = JSON.parse(text);
   // document.getElementById("demo").innerHTML = obj.name;
   
-}
-     
-searchMeal();
+//displayMealInfo();
+      getMealIngredients();
+      searchMeal();
+
+randomButtonEl.addEventListener("click", searchMeal)
