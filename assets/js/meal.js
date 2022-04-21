@@ -1,4 +1,4 @@
-
+var randomButtonEl = document.getElementById("random");
 var searchMeal = function (){
   
   // random pic shows up after each web refreash
@@ -8,6 +8,7 @@ var searchMeal = function (){
       if (response.ok) {
         return response.json().then(function(data) {
           displayMealInfo(data);
+          save(data.meals[0].strMeal, data.meals[0].strInstructions, data.meals[0].strYoutube)
         });
         };
       }); 
@@ -39,7 +40,48 @@ var displayMealInfo = function(data) {
     test.appendChild(ingredientEl);
   }
 }
+// local storage 
+// localStorage.setItem('searchMeal',JSON.stringify(user));
+// var user = JSON.parse(localStorage.getItem('user'));
+// window.localStorage
 
+function save(name, instructions, youtubeLink){
+  var savedHistory = [];
 
-     
-searchMeal();
+  if(localStorage.getItem("dataMeals")){
+    savedHistory = JSON.parse(localStorage.getItem("dataMeals"))
+  }
+
+  var mealObj = {
+    mealName: name,
+    mealInstructions: instructions,
+    mealLink: youtubeLink
+  }
+
+  // console.log(mealObj)
+  savedHistory.push(mealObj);
+
+  localStorage.setItem("dataMeals", JSON.stringify(savedHistory));
+  // function to save value from local stroage
+}
+// suggetion to create a history.js and have local storage and saved data show there 
+function show(){
+  //this is an array!!!!
+  var dataToShow = JSON.parse(localStorage.getItem("dataMeals"));
+  // alert("saved value is =" + dataToShow);
+  // console.log(data)
+
+  // var myObj ={"#meal-name":" ","#recipe":" ","meal-video":" "};
+  // var myJson = JSON.stringify(myObj);
+
+  // window.location ="demo_json.php?x=" + myJson;
+
+  // text = localStorage.getItem("testJSON", myJson);
+  // obj = JSON.parse(text);
+  // document.getElementById("demo").innerHTML = obj.name;
+  
+//displayMealInfo();
+      getMealIngredients();
+      searchMeal();
+
+randomButtonEl.addEventListener("click", searchMeal)
