@@ -1,4 +1,4 @@
-
+var randomButtonEl = document.getElementById("random");
 
 var getRandomAnime = function() {
     var apiUrl = "https://api.aniapi.com/v1/random/anime";
@@ -82,5 +82,5 @@ var displayInfo = function(data) {
     }
 };
 
-
 getRandomAnime();
+randomButtonEl.addEventListener("click", getRandomAnime);
