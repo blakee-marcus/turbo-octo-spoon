@@ -1,5 +1,26 @@
+:root {
+    --primary-background: #C3B1E1;
+    --circle-color: #032541;
+}
+
+* {
+    background-color: var(--primary-background);
+}
+
 html {
     font-family: sans-serif;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+.title-txt {
+    font-family: 'Secular One', sans-serif;
+}
+
+.copy {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 h2 {
@@ -11,12 +32,11 @@ h3 {
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 8px;
-    color: white;
+
 }
 
 .intro { 
     font-size: xx-large;
-    color: white;
     text-align: center;
     padding: 300px 200px 200px 200px;
 }
@@ -35,23 +55,22 @@ h3 {
     object-fit: cover;
     width: 300px;
     height: 450px;
-    border-radius: 8px;
+ 
 }
 
 .overflow-auto {
     height: 450px;
-    border-radius: 8px;
+
 }
 
 /* Anime Section Start */
 
 .anime-information {
-    background-color: #C3B1E1;
+    background-color: var(--primary-background);
     padding: 20px;
 }
 
 .title {
-    color: white;
     font-size: 1.5rem;
     width: 100%;
     font-weight: 600;
@@ -88,7 +107,7 @@ h3 {
 
 .score-circle {
     display: flex;
-    background-color: #032541;
+    background-color: var(--circle-color);
     border-radius: 50%;
     height: 60px;
     width: 60px;
@@ -97,6 +116,7 @@ h3 {
 .circle-text {
     color: white;
     margin: 17px;
+    background-color: var(--circle-color);
 }
 
 .play-icon {
@@ -110,9 +130,7 @@ h3 {
     font-weight: 600;
 }
 
-.info-space {
-    margin-right: 20px;
-}
+
 
 .description {
     color: white;
@@ -128,7 +146,7 @@ h3 {
 
 #watch-later {
     display: flex;
-    background-color: #032541;
+    background-color: var(--circle-color);
     border-radius: 50%;
     height: 46px;
     width: 46px;
@@ -147,3 +165,25 @@ h3 {
     margin: 15px;
 }
 
+/* Layout start */
+
+.container  {
+    height: 500px;
+    background-size: cover;
+
+}
+
+header {
+    background-color: var(--primary-background);
+    background-size: cover;
+}
+
+#meal-image {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.meal-information {
+    background-color: var(--primary-background);
+}

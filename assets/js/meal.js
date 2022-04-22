@@ -1,6 +1,7 @@
 var randomButtonEl = document.getElementById("random");
 var searchMeal = function (){
-  
+  var deleteUlEl = document.getElementById("test");
+  deleteUlEl.textContent = ""
   // random pic shows up after each web refreash
   var apiUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
     // search meal
@@ -24,6 +25,10 @@ var displayMealInfo = function(data) {
 
   //display dish name
   $("#meal-name").text(mealInfo.strMeal);
+  // save btn
+  var saveButton = $('<button>')
+  // saveButton.text('save meal')
+  $('#title-section').append(saveButton);
 
   // display instructions
   $("#recipe").html(mealInfo.strInstructions).text();
@@ -32,12 +37,18 @@ var displayMealInfo = function(data) {
   $("#meal-video").attr("href", mealInfo.strYoutube);
 
   //display Ingredient List
-  for (var i = 1; i < 21; i++) {
-    var ingredientEl = document.createElement("li");
-    var ingredientName = mealInfo['strIngredient' + i];
-    var ingredientMeasure = mealInfo['strMeasure' + i];
-    ingredientEl.textContent = ingredientMeasure + " " + ingredientName;
-    test.appendChild(ingredientEl);
+  for (var i = 1; i < 20; i++) {
+    // console.log(mealInfo['strIngredient' +i]);
+     if(mealInfo['strIngredient' +i].length > 0) {
+      var ingredientEl = document.createElement("li");
+      var ingredientName = mealInfo['strIngredient' + i];
+      var ingredientMeasure = mealInfo['strMeasure' + i];
+      ingredientEl.textContent = ingredientMeasure + " " + ingredientName;
+      test.appendChild(ingredientEl);
+    }
+    else {
+      break
+    }
   }
 }
 // local storage 
@@ -81,6 +92,9 @@ function show(){
   // document.getElementById("demo").innerHTML = obj.name;
   
 }
+
+
+
      
 searchMeal();
 randomButtonEl.addEventListener("click", searchMeal);
