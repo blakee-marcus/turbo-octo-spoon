@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/blakee-marcus/turbo-octo-spoon">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/blakee-marcus/turbo-octo-spoon/blob/main/assets/images/readme-logo-placeholder.PNG" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Anibite</h3>
