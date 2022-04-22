@@ -1,3 +1,12 @@
+:root {
+    --primary-background: #C3B1E1;
+    --circle-color: #032541;
+}
+
+* {
+    background-color: var(--primary-background);
+}
+
 html {
     font-family: sans-serif;
 }
@@ -57,7 +66,7 @@ h3 {
 /* Anime Section Start */
 
 .anime-information {
-    background-color: #C3B1E1;
+    background-color: var(--primary-background);
     padding: 20px;
 }
 
@@ -98,7 +107,7 @@ h3 {
 
 .score-circle {
     display: flex;
-    background-color: #032541;
+    background-color: var(--circle-color);
     border-radius: 50%;
     height: 60px;
     width: 60px;
@@ -107,6 +116,7 @@ h3 {
 .circle-text {
     color: white;
     margin: 17px;
+    background-color: var(--circle-color);
 }
 
 .play-icon {
@@ -136,7 +146,7 @@ h3 {
 
 #watch-later {
     display: flex;
-    background-color: #032541;
+    background-color: var(--circle-color);
     border-radius: 50%;
     height: 46px;
     width: 46px;
@@ -164,7 +174,7 @@ h3 {
 }
 
 header {
-    background-color: #C3B1E1;
+    background-color: var(--primary-background);
     background-size: cover;
 }
 
@@ -175,5 +185,5 @@ header {
 }
 
 .meal-information {
-    background-color: #C3B1E1;
+    background-color: var(--primary-background);
 }

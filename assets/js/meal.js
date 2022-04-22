@@ -38,8 +38,6 @@ var displayMealInfo = function(data) {
 
   //display Ingredient List
   for (var i = 1; i < 20; i++) {
-    console.log(test.textContent);
-
     // console.log(mealInfo['strIngredient' +i]);
      if(mealInfo['strIngredient' +i].length > 0) {
       var ingredientEl = document.createElement("li");
