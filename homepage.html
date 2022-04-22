@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font - for display/name of app. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- google font - for titles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&display=swap" rel="stylesheet">
+    <!-- google font - for copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Righteous&family=Secular+One&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>AniBite</title>
 </head>
+
+
 <body>
     <!-- Navigation and jumbotron -->
-    <header>
-        <h1 class="text-2xl text-center basis-1/4">AniBite</h1>
-        <p class="text-center text-lg basis-1/4">Can't decide on what to do on date night? Or just want a random suggestion for an anime to watch and some food to eat? This website is for you!</p>
-        <button id="random" class="rounded-full bg-slate-800 text-white">AniBite Me</button>
+    <header class="grid-flow-col">
+        <div class="col-1">
+        <h1 class="text-center isolate text-8xl text-white basis-1/4 ">AniBite</h1>
+        <p class="text-center pink-200 opacity-50 leading-tight pt-5 text-lg basis-1/2">Can't decide on what to do after a long day?<br> Or just want a random suggestion for an anime to watch and some food to eat? <br>This website is for you!</p>
+        <div class="flex justify-center">
+            <button id="random" class="rounded-full py-2 px-4 bg-slate-800 text-white bg-pink-700 hover:bg-violet-800">AniBite Me</button>
+        </div>
         <!-- <button> mobile navigation button anime / meal / saved </button> -->
+        </div>
+        <div class="col-2">
+
+        </div>
     </header>
     <main class="grid grid-cols-2">
         <!-- anime stuff -->
@@ -26,12 +45,12 @@
                 <img class="img" id="anime-cover" src="" alt="Anime Cover Art">
             </div>
             <div class="anime-information overflow-auto">
-                <h2>
-                     <span class="title"id="title"></span>
+                <h2 class="title-txt pink-700">
+                     <span class="title pink-700"id="title"></span>
                      <span class="release-year" id="start-date"></span>
                 </h2>
                 <!-- Genre Line & LengthTime Container-->
-                <div class="facts">
+                <div class="facts copy">
                     <span class="genre" id="genre1"></span>
                     <span class="genre" id="genre2"></span>
                     <span class="genre" id="genre3"></span> &#8226;
@@ -39,15 +58,15 @@
                 </div>
                 <!-- Score and Trailer Container -->
                 <ul class="info-line">
-                    <li class="score-circle info-space">
+                    <li class="score-circle info-space copy">
                         <span id="score" class="circle-text"></span>
                     </li>
 
-                    <li class="info-space">
-                      <button id="watch-later"><img src="./assets/images/bookmark-icon.png"></button>  
+                    <li class="info-space copy">
+                      <!--<button id="watch-later"><img src="./assets/images/bookmark-icon.png"></button>  -->
                     </li>
 
-                    <li class="info-space play-trailer" id="trailer-container">
+                    <li class="info-space play-trailer copy" id="trailer-container">
                         <a class="trailer-btn"id="trailer" href="" target="_blank" rel="noopener noreferrer">
                             <img src="./assets/images/play-icon.png" class="play-icon">
                             Watch Trailer
@@ -55,8 +74,8 @@
                     </li>
                 </ul>
                 <article class="font-bold">
-                    <h3>Overview</h3> 
-                    <span class="description"id="anime-description"></span>
+                    <h3 class="title-txt pink-700">Overview</h3> 
+                    <span class="description copy"id="anime-description"></span>
                 </article>
                 
                 
@@ -76,29 +95,29 @@
             <div class="meal-information overflow-auto">
                 
                  <!-- Meal Name/Title -->
-                 <div>
-                <h4 id="meal-name" class="font-bold text-center"></h4> <br>
+                 <div id="title-section">
+                <h4 id="meal-name" class="font-bold text-center title-txt  pink-700"></h4> <br>
                 </div>
 
                 <!-- Ingredient List -->
-                <h5 class="pl-2 font-semibold">Ingredient List:</h5>
-                <ul id="test" class="pl-2">
+                <h5 class="pl-6 font-semibold title-txt pink-700 ">Ingredient List:</h5>
+                <ul id="test" class="pl-6 copy text-white">
                     
                 </ul> <br>
 
                 <!-- Recipe Instructions -->
-                <div class="grid grid-cols-1 pl-2">
-                    <h5 class="font-semibold">Recipe:</h5>
+                <div class="grid grid-cols-1 pl-6">
+                    <h5 class="font-semibold title-txt pink-700">Recipe:</h5>
                 
-                    <span id="recipe"></span>
+                    <span id="recipe" class="copy text-white"></span>
                 </div>
-                
-                
-            </div>
                 <!-- Video Instructions -->
-                <div id="video-container">
+                <div id="video-container" class="pl-6 font-semibold pink-700">
                     <a id="meal-video" href="" target="_blank" rel="noopener noreferrer">Watch Instructions</a>
                 </div>
+                
+            </div>
+                
         </div>
 
         <div class="saved-combination">
