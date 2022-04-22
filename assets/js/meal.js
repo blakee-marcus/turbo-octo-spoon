@@ -27,10 +27,9 @@ var displayMealInfo = function(data) {
   $("#meal-name").text(mealInfo.strMeal);
   // save btn
   var saveButton = $('<button>')
-  saveButton.text('save meal')
+  // saveButton.text('save meal')
   console.log(saveButton);
   $('#title-section').append(saveButton);
-  
 
   // display instructions
   $("#recipe").html(mealInfo.strInstructions).text();
