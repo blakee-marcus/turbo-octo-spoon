@@ -1,13 +1,13 @@
 var randomButtonEl = document.getElementById("random");
 var searchMeal = function (){
-  
+  var deleteUlEl = document.getElementById("test");
+  deleteUlEl.textContent = ""
   // random pic shows up after each web refreash
   var apiUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
     // search meal
     fetch(apiUrl).then(function(response) {
       if (response.ok) {
         return response.json().then(function(data) {
-          console.log(data)
           displayMealInfo(data);
           save(data.meals[0].strMeal, data.meals[0].strInstructions, data.meals[0].strYoutube)
         });
@@ -28,7 +28,6 @@ var displayMealInfo = function(data) {
   // save btn
   var saveButton = $('<button>')
   // saveButton.text('save meal')
-  console.log(saveButton);
   $('#title-section').append(saveButton);
 
   // display instructions
@@ -39,10 +38,10 @@ var displayMealInfo = function(data) {
 
   //display Ingredient List
   for (var i = 1; i < 20; i++) {
-    
-  
+    console.log(test.textContent);
+
     // console.log(mealInfo['strIngredient' +i]);
-    if(mealInfo['strIngredient' +i].length > 0) {
+     if(mealInfo['strIngredient' +i].length > 0) {
       var ingredientEl = document.createElement("li");
       var ingredientName = mealInfo['strIngredient' + i];
       var ingredientMeasure = mealInfo['strMeasure' + i];
