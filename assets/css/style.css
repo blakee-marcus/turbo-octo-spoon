@@ -174,14 +174,6 @@ header {
     object-fit: cover;
 }
 
-button {
-    align-items: center;
-}
-
-#random {
-    align-items: center;
-}
-
 .meal-information {
     background-color: #C3B1E1;
 }
