@@ -75,10 +75,12 @@ var displayInfo = function(data) {
     //Display Cover Image of Anime
     $("#anime-cover").attr("src", anime.cover_image);
 
+    console.log(anime.trailer_url);
     //if there is a trailer display a watch trailer button otherwise hide trailer container
     if (anime.trailer_url === null || anime.trailer_url === undefined) {
         $("#trailer-container").addClass("hide");
     } else {
+        $("#trailer-container").removeClass("hide");
         $("#trailer").attr("href", anime.trailer_url);
     }
 };
