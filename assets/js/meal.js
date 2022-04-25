@@ -60,18 +60,20 @@ var displayMealInfo = function(data) {
 
 var saveBtn = document.getElementById("save-name");
 var localContainer = document.getElementById("saved-combination");
-var localSave = document.getElementsByClassName("onclick-save");
+var localSave = document.getElementById("onclick-save");
 saveBtn.onclick = function () {
   
   // searchMeal();
   // var mealInfo = data.meals[0];
   //$("save-name").text(fetch(apiUrl))
+  //console.log(localStorage.getItem(mealData.meals[0].strMeal));
   console.log(localStorage.getItem(mealData.meals[0].strMeal));
-  
+
   localStorage.setItem(mealData.meals[0].strMeal, mealData.meals[0].strMeal);
   $("#saved-combination").html(mealData.meals[0].strMeal);
   localStorage.getItem(mealData.meals[0].strMeal);
-  $("#saved-combination").append($localSave, [mealData.meals[0].strMeal]);
+  $("#saved-combination").append("<ul>", mealData.meals[0].strMeal, "</ul>");
+  // localSave.append(mealData.meals[0].strMeal);
   // var localSavedItems = document.createElement("li");
   // $("#onclick-save").html(mealData.meals[0].strMeal).text();
   // $("li").append(mealData.meals[0].strMeal);
