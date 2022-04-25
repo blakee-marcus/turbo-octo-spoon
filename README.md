@@ -63,7 +63,7 @@ This website is for you!
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![image](https://user-images.githubusercontent.com/98633770/165019443-90d7d21a-5c59-4c0e-8e10-c8f32f3f89ee.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
