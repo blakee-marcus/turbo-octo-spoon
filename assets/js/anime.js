@@ -1,19 +1,18 @@
 var randomButtonEl = document.getElementById("random");
 
-var getRandomAnime = function() {
+var getRandomAnime = function () {
     var apiUrl = "https://api.aniapi.com/v1/random/anime";
 
-    fetch(apiUrl).then(function(response) {
+    fetch(apiUrl).then(function (response) {
         if (response.ok) {
-            return response.json().then(function(data) {
+            return response.json().then(function (data) {
                 displayInfo(data);
             });
-        };
+        }
     });
-
 };
 
-var displayInfo = function(data) {
+var displayInfo = function (data) {
     var anime = data.data[0];
 
     // if there is no english title to display then display romanji of title
@@ -41,15 +40,15 @@ var displayInfo = function(data) {
             $("#genre3").text(" & " + anime.genres[2]);
         }
     }
-    
+
     //Splits Start Date data at date because api includes time in string
     var baseStartDate = anime.start_date;
-    var splitStartDate = baseStartDate.split('-');
+    var splitStartDate = baseStartDate.split("-");
     startDate = splitStartDate[0];
 
     //display start date
     $("#start-date").text("(" + startDate + ")");
-    
+
     //Display Run Length if it is a movie otherwise display episode count
     if (anime.episodes_count === 1 || anime.episodes_count === 0) {
         $("#length-type").text("");
@@ -59,18 +58,16 @@ var displayInfo = function(data) {
     } else {
         $("#episode-count").text(anime.episodes_count + " ep");
     }
-    
 
     //Display Score
     $("#score").text(anime.score + "%");
 
     //Display English Description if it exist
     if (anime.descriptions.en === null || anime.descriptions.en === undefined) {
-        $("#anime-description").text("No English Description Given")
+        $("#anime-description").text("No English Description Given");
     } else {
         $("#anime-description").html(anime.descriptions.en).text();
     }
-    
 
     //Display Cover Image of Anime
     $("#anime-cover").attr("src", anime.cover_image);

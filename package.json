@@ -1,0 +1,23 @@
+{
+  "name": "turbo-octo-spoon",
+  "version": "1.0.0",
+  "description": "<div id=\"top\"></div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakee-marcus/turbo-octo-spoon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blakee-marcus/turbo-octo-spoon/issues"
+  },
+  "homepage": "https://github.com/blakee-marcus/turbo-octo-spoon#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}

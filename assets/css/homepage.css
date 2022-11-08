@@ -1,5 +1,5 @@
 :root {
-    --primary-background: #C3B1E1;
+    --primary-background: #c3b1e1;
     --circle-color: #032541;
 }
 
@@ -8,19 +8,19 @@
 }
 
 html {
-    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
 h1 {
-    font-family: 'Righteous', cursive;
+    font-family: "Righteous", cursive;
 }
 
 .title-txt {
-    font-family: 'Secular One', sans-serif;
+    font-family: "Secular One", sans-serif;
 }
 
 .copy {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 h2 {
@@ -32,11 +32,9 @@ h3 {
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 8px;
-
 }
 
-
-.intro { 
+.intro {
     font-size: xx-large;
     text-align: center;
     padding: 300px 200px 200px 200px;
@@ -56,12 +54,10 @@ h3 {
     object-fit: cover;
     width: 300px;
     height: 450px;
- 
 }
 
 .overflow-auto {
     height: 450px;
-
 }
 
 /* Anime Section Start */
@@ -131,8 +127,6 @@ h3 {
     font-weight: 600;
 }
 
-
-
 .description {
     color: white;
     font-size: 1em;
@@ -143,7 +137,6 @@ h3 {
 .hide {
     display: none;
 }
-
 
 #watch-later {
     display: flex;
@@ -168,10 +161,9 @@ h3 {
 
 /* Layout start */
 
-.container  {
+.container {
     height: 500px;
     background-size: cover;
-
 }
 
 header {
