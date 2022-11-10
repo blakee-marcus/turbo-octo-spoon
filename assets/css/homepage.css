@@ -11,18 +11,12 @@ html {
     font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
+header {
+    margin-bottom: 2rem;
+}
 h1 {
     font-family: "Righteous", cursive;
 }
-
-.title-txt {
-    font-family: "Secular One", sans-serif;
-}
-
-.copy {
-    font-family: "Josefin Sans", sans-serif;
-}
-
 h2 {
     font-size: 1.5em;
     font-weight: 600;
@@ -32,6 +26,14 @@ h3 {
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 8px;
+}
+
+.title-txt {
+    font-family: "Secular One", sans-serif;
+}
+
+.copy {
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .intro {
@@ -177,6 +179,32 @@ header {
     object-fit: cover;
 }
 
+#meal-video {
+    font-weight: 800;
+}
+
 .meal-information {
     background-color: var(--primary-background);
 }
+.footerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recentBtn {
+    background-color: rgb(190 24 93);
+    border-radius: 9999px;
+    padding: 0.5rem;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.recentBtn a {
+    background-color: rgb(190 24 93);
+    border-radius: 9999px;
+}
+

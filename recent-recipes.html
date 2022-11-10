@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recent Recipes</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Righteous&family=Secular+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/homepage.css" />
+        <link rel="stylesheet" href="./assets/css/recent-recipes.css" />
+        <title>Recent Recipes</title>
+    </head>
+    <body>
+        <header class="grid-flow-col">
+            <div class="col-1">
+                <h1 class="text-center isolate text-8xl text-white basis-1/4">
+                    AniBite
+                </h1>
+                <p
+                    class="text-center pink-200 opacity-50 leading-tight pt-5 text-lg basis-1/2"
+                >
+                    Can't decide on what to do after a long day?<br />
+                    Or just want a random suggestion for an anime to watch and
+                    some food to eat? <br />This website is for you!
+                </p>
+                <div class="flex justify-center anibiteBtn">
+                    <button
+                        class="rounded-full py-2 px-4 bg-slate-800 text-white bg-pink-700 hover:bg-violet-800"
+                    >
+                        <a href="./homepage.html">AniBite Me</a>
+                    </button>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </header>
+        <main>
+            <section class="card-container"></section>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./assets/js/recent-recipes.js"></script>
+    </body>
 </html>

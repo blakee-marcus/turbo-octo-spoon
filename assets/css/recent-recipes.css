@@ -1,0 +1,76 @@
+:root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(207, 225, 177, 0.25);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+}
+
+header {
+    padding-bottom: 1rem;
+    box-shadow: 0px 3px 35px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+section {
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
+}
+
+.anibiteBtn {
+    padding-top: 1rem;
+}
+
+.anibiteBtn a {
+    background-color: rgb(190 24 93);
+}
+.anibiteBtn a:hover {
+    background-color: rgb(91 33 182);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 16rem;
+}
+
+.card {
+    border: 5px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--tertiary);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+}
+
+/* .card:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+} */
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.card div {
+    background-color: var(--secondary);
+    padding: 5px 5px 5px 0px;
+}
+.card h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--secondary);
+}

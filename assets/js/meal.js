@@ -59,24 +59,14 @@ var recentRecipes = function(data) {
     console.log(mealInfo);
     var recentRecipe = {
         mealId:  mealInfo.idMeal,
+        mealSource: mealInfo.strSource,
+        mealName: mealInfo.strMeal,
         mealThumbnail: mealInfo.strMealThumb
     };
-    console.log(recentRecipe);
     recentRecipesArray.push(recentRecipe);
-    console.log(recentRecipesArray);
-
+    console.log(recentRecipe);
     localStorage.setItem("savedRecipes", JSON.stringify(recentRecipesArray));
-    console.log(JSON.parse(localStorage.getItem("savedRecipes")));
 };
-// saveBtn.onclick = function () {
-    
-//     console.log(localStorage.getItem(mealData.meals[0].strMeal));
-
-//     localStorage.setItem(mealData.meals[0].strMeal, mealData.meals[0].strMeal);
-//     $("#saved-combination").html(mealData.meals[0].strMeal);
-//     localStorage.getItem(mealData.meals[0].strMeal);
-//     $("#saved-combination").append($localSave, [mealData.meals[0].strMeal]);
-// };    
 
 searchMeal();
 randomButtonEl.addEventListener("click", searchMeal);
